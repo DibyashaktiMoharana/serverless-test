@@ -1,0 +1,42 @@
+# Requirements for BOB Credit Card Recommendation Tool
+# Core dependencies for the recommendation engine
+
+# Data handling (optional - tool works without it)
+# pandas>=1.3.0
+
+# Standard library modules used:
+# - json (built-in)
+# - typing (built-in)
+# - dataclasses (built-in Python 3.7+)
+# - enum (built-in)
+# - logging (built-in)
+
+# For watsonx Orchestrate integration
+# requests>=2.25.0  # if needed for API calls
+
+# Note: This tool is designed to work with Python standard library only
+# to ensure compatibility with watsonx Orchestrate runtime environment 
+
+# FastAPI and web framework dependencies
+fastapi
+uvicorn[standard]
+
+# HTTP client for making requests to Neon DB
+httpx
+
+# Pydantic for data validation (comes with FastAPI but specifying version)
+pydantic
+
+# Type hints support
+typing-extensions>=4.12.2
+
+# For async operations
+anyio==3.7.1
+
+# Additional utilities
+python-multipart>=0.0.12
+python-jose[cryptography]>=3.3.0
+
+# Development dependencies (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1 
