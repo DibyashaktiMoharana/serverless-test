@@ -68,14 +68,12 @@ async def search_customers(
 
 @customerMetaDataRouter.get("/search_by_name", response_model=List[CustomerCreditCardHolder])
 async def search_customers_by_name(
-    name: str = Query(..., description="Customer name to search for"),
-    limit: Optional[int] = Query(10, description="Limit results")
+    name: str = Query(..., description="Customer name to search for")
 ):
     """Search customers by cardholder name"""
     try:
         params = {
             'Cardholder Name': f"ilike.*{name}*",
-            'limit': limit,
             'order': 'Cardholder Name.asc'
         }
         data = await query_postgrest("/bob_credit_card_holders", params)
