@@ -63,7 +63,13 @@ async def root():
             "/transactions/search_by_card_and_merchant?card_number={card_number}&merchant={merchant} - Card + Merchant filter",
             "/transactions/search_by_card_and_date_range?card_number={card_number}&from_date={from_date}&to_date={to_date} - Card + Date range filter",
             "/transactions/search_by_card_advanced?card_number={card_number}&mcc={mcc}&merchant={merchant} - Advanced combined filters",
-            "/transactions/get_transaction_summary - Get transaction statistics"
+            "/transactions/get_transaction_summary - Get transaction statistics",
+            "/transactions/aggregate_by_mcc?mcc={mcc}&card_number={card_number} - Aggregate transactions for specific MCC and card",
+            "/transactions/aggregate_by_card - Aggregate transactions by card number", 
+            "/transactions/aggregate_by_month - Aggregate transactions by month/year",
+            "/transactions/aggregate_by_date_range - Aggregate transactions by date range with optional grouping",
+            "/transactions/aggregate_comprehensive - Comprehensive aggregation with multiple groupings",
+            "/transactions/aggregate_by_card_and_mcc_array?card_number={card_number}&mcc_codes={mcc_codes} - Aggregate by card and multiple MCC codes"
         ],
         "timestamp": datetime.now().isoformat()
     }
